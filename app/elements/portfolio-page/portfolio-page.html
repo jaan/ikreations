@@ -8,6 +8,7 @@
     :host {
       display: block;
       width: 100%;
+      position: relative;
     }
     portfolio-card {
       margin-bottom: 30px;
@@ -16,7 +17,7 @@
 
     <portfolio-service id="service" portfolios="{{portfolios}}"></portfolio-service>
     
-    <div layout vertical center>
+    <div layout vertical>
       <template repeat="{{portfolio in portfolios}}">
         <portfolio-card favorite="{{portfolio.favorite}}"> 
         <img src="{{portfolio.avatar}}" width="70" height="70">
