@@ -1,22 +1,6 @@
 <polymer-element name="services-page">
   <template>
-    <style>
-    :host {
-        display: block;
-        position: relative;
-        background-color: white;
-        padding: 20px;
-        width: 100%;
-        font-size: 1.2rem;
-        font-weight: 300;
-        box-sizing:border-box;
-    }
-    ul li {
-        padding-bottom: 15px;
-    }
-
-    </style>
-
+    <core-style ref="my-content-pages"></core-style>
     <div class="container" layout horizontal center>
         <ul>
             <li>Responsive Web Design(RWD)(HTML5, CSS3, JAVASCRIPT, AJAX)</li>
@@ -26,11 +10,13 @@
             <li>Content Management System(CMS) (Joomla/Drupal/Dotnetnuke)</li>
             <li>Business and Personal blogs (Wordpress/MovableType)</li>
             <li>Community Forums (PhpBB/vBulletin)</li>
-            <li>Search Engine Optimisation (SEO)</li>
+            <li>Search Engine Optimization (SEO)</li>
             <li>Mobile, Tablet, Desktop and a pleathora of devices</li>
         </ul>
     </div>
 
+    <paper-ripple fit></paper-ripple>
+    <paper-shadow z="3"></paper-shadow>
   </template>
   <script>
   Polymer({});

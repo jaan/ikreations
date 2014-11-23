@@ -1,19 +1,6 @@
 <polymer-element name="home-page">
   <template>
-    <style>
-    :host {
-      display: block;
-      position: relative;
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      font-size: 1.2rem;
-      font-weight: 300;
-      box-sizing:border-box;
-    }
-
-    </style>
-
+    <core-style ref="my-content-pages"></core-style>
     <div class="container" layout vertical center>
         <p>
             iKreations, based in Bangalore, provides web design, web 
@@ -25,7 +12,8 @@
             Read more in About us section.
         </p>
     </div>
-
+    <paper-ripple fit></paper-ripple>
+    <paper-shadow z="3"></paper-shadow>
   </template>
   <script>
   Polymer({});

@@ -1,19 +1,6 @@
 <polymer-element name="contactus-page">
   <template>
-    <style>
-    :host {
-        display: block;
-        position: relative;
-        background-color: white;
-        padding: 20px;
-        width: 100%;
-        font-size: 1.2rem;
-        font-weight: 300;
-        box-sizing:border-box;
-    }
-
-    </style>
-
+    <core-style ref="my-content-pages"></core-style>
     <div class="container" layout horizontal center>
         <p>
             General queries : <a href="mailto:hello@ikreations.com">hello@ikreations.com</a><br/><br/>
@@ -21,7 +8,8 @@
             Ahmedabad : <a href="mailto:bs@ikreations.com">adib@ikreations.com</a><br/><br/>
         </p>
     </div>
-
+    <paper-ripple fit></paper-ripple>
+    <paper-shadow z="3"></paper-shadow>
   </template>
   <script>
   Polymer({});

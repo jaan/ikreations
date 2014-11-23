@@ -1,19 +1,6 @@
 <polymer-element name="whyus-page">
   <template>
-    <style>
-    :host {
-        display: block;
-        position: relative;
-        background-color: white;
-        padding: 20px;
-        width: 100%;
-        font-size: 1.2rem;
-        font-weight: 300;
-        box-sizing:border-box;
-    }
-
-    </style>
-
+    <core-style ref="my-content-pages"></core-style>
     <div class="container" layout horizontal center>
         <p>
             <b>E</b>xperience and <b>E</b>xpertise:<br/>
@@ -26,7 +13,8 @@
             iKreations is a client-centric organization. We make it our business to understand and help our clients to achieve their business goals.<br/><br/>
         </p>
     </div>
-
+    <paper-ripple fit></paper-ripple>
+    <paper-shadow z="3"></paper-shadow>
   </template>
   <script>
   Polymer({});
