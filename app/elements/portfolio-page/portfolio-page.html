@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="portfolio-service.html">
+<link rel="import" href="portfolio-card.html">
+
+<polymer-element name="portfolio-list" attributes="show">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    portfolio-card {
+      margin-bottom: 30px;
+    }
+    </style>
+
+    <portfolio-service id="service" portfolios="{{portfolios}}"></portfolio-service>
+    
+    <div layout vertical center>
+      <template repeat="{{portfolio in portfolios}}">
+        <portfolio-card favorite="{{portfolio.favorite}}"> 
+        <img src="{{portfolio.avatar}}" width="70" height="70">
+          <h2>{{portfolio.websitename}}</h2>
+          <p>{{portfolio.description}}</p>
+        </portfolio-card>
+      </template>
+    </div>
+  </template>
+
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>

@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>unquote</title>
+  <title>ikreations</title>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
@@ -17,9 +17,17 @@
     </script>
   <link rel="import" href="/bower_components/font-roboto/roboto.html">
   <link rel="import" href="/bower_components/core-header-panel/core-header-panel.html"> 
-  <link rel="import"href="/bower_components/core-toolbar/core-toolbar.html"> 
-  <link rel="import"href="/bower_components/paper-tabs/paper-tabs.html"> 
-  <!-- <link rel="import" href="post-list.html"> -->
+  <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html"> 
+  <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html"> 
+  <link rel="import" href="/bower_components/core-pages/core-pages.html"> 
+  <link rel="import" href="/bower_components/love-heart/love-heart.html"> 
+  <link rel="import" href="/elements/ikreations-title.html">
+  <link rel="import" href="/elements/home/home.html">
+  <link rel="import" href="/elements/aboutus/aboutus.html">
+  <link rel="import" href="/elements/services/services.html">
+  <link rel="import" href="/elements/whyus/whyus.html">
+  <link rel="import" href="/elements/portfolio-page/portfolio-page.html">
+  <link rel="import" href="/elements/contactus/contactus.html">
 
   <style>
   html,body {
@@ -33,10 +41,6 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch; 
   }
-  core-toolbar {
-    background: #03a9f4;
-    color: white;
-  }
   #tabs {
     width: 100%;
     margin: 0;
@@ -44,7 +48,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-	text-transform: uppercase;
+    text-transform: uppercase;
   }
   .container {
     width: 80%;
@@ -55,37 +59,77 @@
       width: 200px;
     }
     .container {
-      width: 400px;
+      /*width: 400px;*/
     }
   }
+  core-toolbar {
+    color: white;
+    background-color: #3F51B5; 
+}
+footer {
+    text-align:center;
+    padding:10px;
+}
+
   </style>
 
 </head>
 
 <body unresolved>
-  <core-header-panel>
-    <core-toolbar>
-      <paper-tabs id="tabs" selected="all" self-end>
-        <paper-tab name="all">All</paper-tab>
-        <paper-tab name="favorites">Favorites</paper-tab>
-      </paper-tabs>
+        <core-header-panel>
+        <core-toolbar class="medium-tall">
+        <div flex><h2>iKreations</h2></div>
+         <div class="bottom fit" horizontal layout>
+          <paper-tabs id="tabs" selected="0" flex scrollable style="max-width: 900px;">
+            <paper-tab name="home">HOME</paper-tab>
+            <paper-tab name="about-us">About us</paper-tab>
+            <paper-tab name="services">SERVICES</paper-tab>
+            <paper-tab name="why-us">WHY US</paper-tab>
+            <paper-tab name="portfolio">PORTFOLIO</paper-tab>
+            <paper-tab name="contact-us">CONTACT US</paper-tab>
+          </paper-tabs>
+        </div>
+        </core-toolbar>
+        <div class="container">
+            <core-pages flex vertical layout>
+                <div name="home">
+                    <home-page></home-page>
+                </div>
+                <div name="about-us">
+                    <aboutus-page></aboutus-page>
+                </div>
+                <div name="services">
+                    <services-page></services-page>
+                </div>
+                <div name="why-us">
+                    <whyus-page></whyus-page>
+                </div>
+                <div name="portfolio">
+                    <portfolio-list></portfolio-list>
+                </div>
+                <div name="contact-us">
+                    <contactus-page></contactus-page>
+                </div>
+            </core-pages>
+        </div>
+        <!-- <footer>
+            Made with <love-heart></love-heart> by trained monkeys
+            <p id="copyright">
+                © 2014 iKreations.
+            </p>
+        </footer> -->
+        </core-header-panel>
 
-    </core-toolbar>
+    <script>
+    var pages = document.querySelector('core-pages');
+    var tabs = document.querySelector('paper-tabs');
+    var list = document.querySelector('portfolio-list');
 
-    <div class="container" layout vertical center>
-      <post-list show="all"></post-list>
-    </div>
-
-  </core-header-panel>
-
-  <script>
-  var tabs = document.querySelector('paper-tabs');
-  var list = document.querySelector('post-list');
-
-  tabs.addEventListener('core-select', function() {
-    list.show = tabs.selected;
-  });
-  </script>
+    tabs.addEventListener('core-select', function() {
+        pages.selected = tabs.selected;
+    // list.show = tabs.selected;
+    });
+    </script>
 </body>
 
 </html>

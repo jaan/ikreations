@@ -1,0 +1,74 @@
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<!-- 
+  `<portfolio-service>` provides an API for a fake service -- 
+  _unquote_, the read-only social networking service!
+
+  Provides a very simple API: `portfolios` returns the list of portfolios.
+  `setFavorite` pretends to persist a user's favorite choice.
+
+  @element portfolio-service
+  @demo 
+  @homepage http://www.polymer-project.org/docs/start/tutorial.html
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  <table border="0">
+    <tr>
+      <td><code>uid</code></td>
+      <td>Number</td>
+      <td>Unique ID for this post.</td>
+    </tr>
+     <tr>
+      <td><code>username</code></td>
+      <td>String</td>
+      <td>Poster's username.</td>
+    </tr>
+    <tr>
+      <td><code>avatar</code></td>
+      <td>String</td>
+      <td>URL for the user's avatar.</td>
+    </tr>  
+    <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+      <td>Post text.</td>
+    </tr>  
+    <tr>
+      <td><code>favorite</code></td>
+      <td>Boolean</td>
+      <td>True if the current user favorited this post.</td>
+    </tr>
+  </table>
+  
+  @attribute portfolios 
+  @type Array
+  @default []
+-->
+<polymer-element name="portfolio-service" attributes="portfolios">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="../../data/portfolios.json"
+      on-core-response="{{portfoliosLoaded}}" 
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('portfolio-service', {
+    created: function() {
+      this.portfolios = [];
+    },
+    portfoliosLoaded: function() {
+      // Make a copy of the loaded data
+      this.portfolios = this.$.ajax.response.slice(0);
+    }
+  });
+  </script>
+</polymer-element>
