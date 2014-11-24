@@ -1,9 +1,9 @@
 <polymer-element name="home-page">
   <template>
     <core-style ref="my-content-pages"></core-style>
-    <div class="container" layout vertical center>
+    <div class="container" layout horizontal center>
         <p>
-            iKreations, based in Bangalore, provides web design, web 
+            <ikreations-title></ikreations-title>, based in Bangalore, provides web design, web 
             programming, e-commerce and web hosting services.
             <br><br>
             We provide high quality, flexible, usable, scalable, accessible and user-friendly websites for commercial and non-commercial organizations coupled with excellent customer 
@@ -16,6 +16,6 @@
     <paper-shadow z="3"></paper-shadow>
   </template>
   <script>
-  Polymer({});
+  Polymer("home-page");
   </script>
 </polymer-element>
