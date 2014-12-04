@@ -22,10 +22,18 @@
       font-weight: 300;
     }
     polyfill-next-selector { content: '.card-header img'; }
-    .card-header ::content img {
-      width: 70px;
+    .card-header ::content div {
+      width:70px;
+      height:70px;
+      font-size:30px;
       border-radius: 50%;
       margin: 10px;
+      text-align: center;
+      -ms-transform: rotate(-30deg); /* IE 9 */
+      -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+      transform: rotate(-30deg);
+      background-color: #f44336;
+      line-height:70px;
     }
 
     :host([favorite]) core-icon-button {
@@ -36,9 +44,8 @@
 
     <div class="card-header" layout horizontal center>
 
-        <content select="img"></content>
+        <content select="div"></content>
         <content select="h2"></content>
-
     </div>
 
     <content></content>
@@ -46,7 +53,7 @@
 <!--     <core-image style="width:400px; height:400px;" sizing="cover"
   src="http://lorempixel.com/600/400"></core-image> -->
 
-    <paper-ripple fit></paper-ripple>
+    <!-- <paper-ripple fit></paper-ripple> -->
     <paper-shadow z="3"></paper-shadow>
   </template>
   <script>

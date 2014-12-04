@@ -1,0 +1,75 @@
+<link rel="import" href="../bower_components/core-style/core-style.html">
+<!--  Theme styles will be shared across the components -->
+<script>
+
+  // CoreStyle.g.theme = {
+  //   colorOne: '#abcdef',
+  //   colorTwo: '#123456',
+  //   colorThree: '#224433'
+  // }
+</script>
+
+<!-- <core-style id="main">
+  body {
+    font-family: sans-serif;
+  }
+
+  section {
+    overflow: auto;
+  }
+
+  <template repeat="{{item in g.items}}">
+    my-content-pages:nth-of-type({{item+1}}) {
+      background-color: {{ g.theme.colorThree | cycle(item * -1) }};
+    }
+  </template>
+</core-style>
+
+<core-style id="my-toolbar">
+  :host {
+    border-bottom: 8px solid {{g.theme.colorOne}};
+    color: {{g.theme.colorOne | cycle(100)}};
+    background-color: {{g.theme.colorTwo}};
+  }
+</core-style> -->
+
+<core-style id="my-content-pages">
+    :host {
+        display: block;
+        position: relative;
+        background-color: white;
+        padding:20px;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 300;
+        box-sizing:border-box;
+        border-radius:3px;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+    ul {
+        padding-left:20px;
+    }
+    ul li {
+        padding-bottom: 15px;
+    }
+    @media (max-width: 481px) {
+      :host {
+        padding: 10px 20px;
+      }
+    }
+    
+<!--     :host {
+        box-sizing: border-box;
+        background-color: {{g.theme.colorOne}};
+        border: 8px solid {{g.theme.colorOne | cycle(50)}};
+        color: {{g.theme.colorOne | cycle(-100)}};
+    }
+
+    :host(:nth-of-type(2n + 1)) {
+        background-color: {{g.theme.colorTwo}};
+        border: 8px solid {{g.theme.colorTwo | cycle(-50)}};
+        color: {{g.theme.colorTwo | cycle(100)}}
+    } -->
+    <paper-ripple fit></paper-ripple>
+    <paper-shadow z="3"></paper-shadow>
+</core-style>

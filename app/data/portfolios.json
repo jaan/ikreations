@@ -1,20 +1,64 @@
 [
   {
-    "uid": 1,
-    "websitename" : "Buzzlyfe",
-    "description" : "BuzzLyfe the best best Buzz",
+    "sid": 1,
+    "websitename" : "BUZZLYFE",
+    "description" : "BuzzLyfe offers the buzz around you!",
+    "url" : "http://www.buzzlyfe.com", 
     "avatar" : "../images/avatar-02.svg"
   },
   {
-    "uid": 2,
-    "websitename" : "Techbray",
-    "description" : "Techbray site the best site",
+    "sid": 2,
+    "websitename" : "INFODABBA",
+    "description" : "All your information at one place",
+    "url" : "http://www.infodabba.com", 
     "avatar" : "../images/avatar-01.svg"
   },
   {
-    "uid": 3,
+    "sid": 3,
+    "websitename" : "WEDDINGAPPLE",
+    "description" : "Wedding meets apple",
+    "url" : "http://www.weddingapple.com", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 4,
     "websitename" : "Techbray",
-    "description" : "Techbray site the best site",
+    "description" : "Blog related to technology started in 2008",
+    "url" : "http://www.techbray.com", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 5,
+    "websitename" : "ASKPRO",
+    "description" : "Ask your question to a pro",
+    "url" : "http://www.askpro.in", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 6,
+    "websitename" : "WEDDINGEXPRESS",
+    "description" : "Wedding related site",
+    "url" : "http://www.weddingexpress.in", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 7,
+    "websitename" : "BENGLUED",
+    "description" : "Blog which glues you to Bangalore",
+    "url" : "http://www.benglued.com", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 8,
+    "websitename" : "SECONDSHELF",
+    "description" : "Place to buy/sell your old or used books",
+    "url" : "http://www.secondshelf.in", 
+    "avatar" : "../images/avatar-01.svg"
+  },
+  {
+    "sid": 9,
+    "websitename" : "MANY MORE...",
+    "description" : "Many more sites...",
     "avatar" : "../images/avatar-01.svg"
   }
 ]

@@ -15,6 +15,7 @@
       margin-bottom: 30px;
       box-sizing:border-box;
     }
+
     </style>
 
     <portfolio-service id="service" portfolios="{{portfolios}}"></portfolio-service>
@@ -22,9 +23,12 @@
     <div layout vertical>
       <template repeat="{{portfolio in portfolios}}">
         <portfolio-card favorite="{{portfolio.favorite}}"> 
-        <img src="{{portfolio.avatar}}" width="70" height="70">
+          <div width="70" height="70">{{portfolio.sid}}</div>
           <h2>{{portfolio.websitename}}</h2>
           <p>{{portfolio.description}}</p>
+          <template if="{{portfolio.url}}">
+              <p>Link: <a href="{{portfolio.url}}" target="_blank">{{portfolio.url}}</a></p>
+          </template>
         </portfolio-card>
       </template>
     </div>
